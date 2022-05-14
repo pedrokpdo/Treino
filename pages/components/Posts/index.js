@@ -1,7 +1,18 @@
+import { posts } from "../../../mock"
+
 export const Posts = () => {
-    return(
-        <div>
-            <h1>Posts</h1>
+    return (
+        <div className="postContainer">
+            {posts.map((item) => (
+                <>
+                    <div>
+                        <h3>{item.name}</h3>
+                        <span>{item.date}</span>    
+                    </div>
+
+
+                </>
+            ))}
         </div>
     )
 }
